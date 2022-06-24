@@ -14,7 +14,7 @@
     --trans: all 400ms;
     --bx-sh: 0 0 20px rgba(0, 0, 0, 0.179);
     --bx-sh-card: 0 0 20px rgba(0, 0, 0, 0.085);
-    font-size: 16px;
+    font-size: 18px;
 }
 body{
     font-family: 'Open Sans';
@@ -24,8 +24,8 @@ body{
 main h1 h2 {
     color: var(--Dark-Cyan);
     font-size: 2.4rem;
-    font-family: Poppins;
-    font-weight: 700;
+    font-family: 'Poppins';
+    font-weight: 600;
 }
 .header-bg {
   position: absolute;
@@ -245,7 +245,7 @@ footer .cards-footer {
 
 footer .cards-footer .item {
   position: relative;
-  font: 400 13px open sans;
+  font: 400 13px 'Open sans';
 }
 
 footer .cards-footer .item a {
@@ -281,7 +281,7 @@ footer .cards-footer .item:nth-child(1) p {
 footer .cards-footer .item:nth-child(2) ul,
 footer .cards-footer .item:nth-child(3) ul {
   margin-top: 2rem;
-  font: 400 14px open sans;
+  font: 400 14px 'Open sans';
 }
 footer .cards-footer .item:nth-child(2) li,
 footer .cards-footer .item:nth-child(3) li {
@@ -320,7 +320,7 @@ footer .copyright {
 }
 footer .copyright .words {
   text-align: right;
-  font: 400 14px poppins;
+  font: 400 14px 'Poppins';
   color: var(--Pale-Cyan);
   transition: var(--trans);
 }
