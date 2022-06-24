@@ -281,7 +281,7 @@ footer .cards-footer .item:nth-child(1) p {
 footer .cards-footer .item:nth-child(2) ul,
 footer .cards-footer .item:nth-child(3) ul {
   margin-top: 2rem;
-  font: 400 14px 'Open sans';
+  font: 400 14px Open sans;
 }
 footer .cards-footer .item:nth-child(2) li,
 footer .cards-footer .item:nth-child(3) li {
@@ -320,7 +320,7 @@ footer .copyright {
 }
 footer .copyright .words {
   text-align: right;
-  font: 400 14px 'Poppins';
+  font: 400 14px Poppins;
   color: var(--Pale-Cyan);
   transition: var(--trans);
 }
@@ -331,7 +331,6 @@ footer .copyright .words p {
 footer ul li {
   cursor: pointer;
 }
-
 button:hover,
 button:active {
   opacity: 0.6;
