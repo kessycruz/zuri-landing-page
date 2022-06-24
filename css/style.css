@@ -7,7 +7,6 @@
   }
   
 :root{
-    
     --primary-pink: hsl(322, 100%, 66%);
     --Dark-Cyan: hsl(192, 100%, 9%);
     --Grayish-Blue: hsl(208, 11%, 55%);
@@ -15,9 +14,10 @@
     --trans: all 400ms;
     --bx-sh: 0 0 20px rgba(0, 0, 0, 0.179);
     --bx-sh-card: 0 0 20px rgba(0, 0, 0, 0.085);
+    font-size: 16px;
 }
 body{
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-weight: 400;
 }
 
@@ -27,36 +27,35 @@ main h1 h2 {
     font-family: Poppins;
     font-weight: 700;
 }
-
-main .header {
-  background: url(images/bg-hero-desktop.svg);
+.header-bg {
+  position: absolute;
   background-size: cover;
+  background-repeat: none;
   background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
 }
-
-main .header .header-content {
+.header-content {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
   padding: 3rem 5rem;
   background: rgba(197, 241, 252, 0.293);
   transition: var(--trans);
 }
-
-main .header .header-content .logo {
+.header-content .logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: var(--trans);
   margin-bottom: 4rem;
 }
-
-main .header .header-content .logo img {
+.header-content .logo img {
   width: 150px;
   height: 25px;
 }
-
-main .header .header-content .logo button {
+.header-content .logo button {
   color: var(--Dark-Cyan);
   background: #fff;
   border: none;
@@ -67,54 +66,30 @@ main .header .header-content .logo button {
   transition: var(--trans);
   cursor: pointer;
 }
-
-main .header .header-content .hero .hero-content {
+ .hero-content {
   display: flex;
   justify-content: space-between;
   transition: var(--trans);
 }
-
-main .header .header-content .hero .hero-content .hero-text {
+.hero-content .hero-text {
   margin-top: 7%;
   padding-right: 10%;
   transition: var(--trans);
   animation: fadein 1s ease forwards;
 }
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-main .header .header-content .hero .hero-content .hero-text p {
+.hero-content .hero-text p {
   font: 400 18px open sans;
   color: var(--Dark-Cyan);
   margin: 2rem 0;
 }
 
-main .header .header-content .hero .hero-content img {
+.header-content .hero .hero-content img {
   width: 50%;
   animation: fadeup 1s 1s ease forwards;
   opacity: 0;
 }
 
-@keyframes fadeup {
-  0% {
-    transform: translateY(50px);
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-main .btn {
+.btn {
   color: var(--Pale-Cyan);
   background: var(--primary-pink);
   border: none;
@@ -129,7 +104,28 @@ main .btn {
   cursor: pointer;
 }
 
-main .content {
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeup {
+  0% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.content {
   padding: 3rem 5rem;
   margin: 5rem 0;
   display: flex;
@@ -138,7 +134,7 @@ main .content {
   transition: var(--trans);
 }
 
-main .content .cards .card {
+.content .cards .card {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -151,6 +147,7 @@ main .content .cards .card {
   animation: fadeup 1s 1s ease forwards;
   opacity: 0;
 }
+
 
 @keyframes fadeup {
   0% {
@@ -170,7 +167,7 @@ main .content .cards .card:nth-child(3) {
   animation-delay: 2s;
 }
 
-main .content .cards .card .word {
+.cards .card .word {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -178,26 +175,26 @@ main .content .cards .card .word {
   transition: var(--trans);
 }
 
-main .content .cards .card .word h2 {
+.cards .card .word h2 {
   font: 600 1.3rem 'poppins';
   margin-bottom: 1rem;
 }
 
-main .content .cards .card .word p {
+.cards .card .word p {
   color: var(--Grayish-Blue);
   font: 400 18px 'open sans';
 }
 
-main .content .cards .card .image img {
+.cards .card .image img {
   width: 50%;
 }
 
-main .content .cards .card .left-img {
+.cards .card .left-img {
   width: 100%;
   text-align: right;
 }
 
-main .content .cards .card .left-img img {
+.cards .card .left-img img {
   width: 50%;
 }
 
@@ -278,32 +275,26 @@ footer .cards-footer .item:nth-child(1) .icon {
   justify-content: center;
   color: var(--Pale-Cyan);
 }
-
 footer .cards-footer .item:nth-child(1) p {
   margin-bottom: 1rem;
 }
-
 footer .cards-footer .item:nth-child(2) ul,
 footer .cards-footer .item:nth-child(3) ul {
   margin-top: 2rem;
   font: 400 14px open sans;
 }
-
 footer .cards-footer .item:nth-child(2) li,
 footer .cards-footer .item:nth-child(3) li {
   padding-bottom: 1rem;
 }
-
 footer .cards-footer .item:nth-child(2) li:hover,
 footer .cards-footer .item:nth-child(3) li:hover {
   text-decoration: underline;
 }
-
 footer .cards-footer .item:last-child ul {
   display: inline-flex;
   transform: translateY(-25px);
 }
-
 footer .cards-footer .item:last-child ul li {
   transition: var(--trans);
   color: var(--Pale-Cyan);
@@ -318,25 +309,21 @@ footer .cards-footer .item:last-child ul li {
   font-size: 0.8rem;
   position: relative;
 }
-
 footer .cards-footer .item:last-child ul li:hover,
 footer .cards-footer .item:last-child ul li:active {
   color: var(--primary-pink);
   border: 1px solid var(--primary-pink);
 }
-
 footer .copyright {
   width: 100%;
   margin-top: 4rem;
 }
-
 footer .copyright .words {
   text-align: right;
   font: 400 14px poppins;
   color: var(--Pale-Cyan);
   transition: var(--trans);
 }
-
 footer .copyright .words p {
   padding-right: 2rem;
 }
@@ -349,108 +336,110 @@ button:hover,
 button:active {
   opacity: 0.6;
 }
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--Dark-Cyan);
-  border-radius: 9px;
-}
-
 /*Media Queries*/
 @media screen and (min-width: 375px) and (max-width: 700px){
-    main .header .header-content .logo img {
-      width: 120px;
-      height: 20px;
-    }
-  main .header .header-content .logo button {
-      padding: 10px !important;
-      font-size: 12px;
-    }
-  main .header .header-content {
-      padding: 1.3rem;
-      flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    main .header {
-         background: url(images/bg-hero-mobile.svg);
-       }
-  
-    main .header .header-content .hero-text button {
-      padding: 10px !important;
-      margin: 0 10% !important;
-    }
-    main .content .cards .card {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-      }
+.header-content {
+  padding: 1.3rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+ }
+header .header-bg {
+  background: url(images/bg-hero-mobile.svg);
+ } 
+.header-content .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .hero-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+.hero-text {
+  padding-bottom: 40px;
+}
+.hero .hero-content img {
+  width: 100%;
+  animation: fadeup 1s 1s ease forwards;
+  opacity: 0;
+}
+.content {
+  padding: 20px;
+  width: 100%;
+}
+.content .cards {
+  display: flex;
+  flex-direction: column;
+}
+.cards .card {
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}   
+.cards .card .word {
+  margin-top: 4rem;
+  text-align: center;
+  width: fit-content;        
+}
+.cards .card .word h2 {
+  font-size: 1.7rem;
+}
+.cards .card .word p {
+  font-size: 18px;
+}
+.cards .card .image {    
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.left-img{
+  display: flex;
+  flex-direction: column;
+}   
+footer .card .overflow {
+  width: 93%;
+}   
+footer .card .overflow h2 {
+  font-size: 1.3rem;
+}
     
-      main .content .cards .card .word {
-        margin-top: 4rem;
-        text-align: center;
-      }
-    
-      main .content .cards .card .word h2 {
-        font-size: 1.7rem;
-      }
-    
-      main .content .cards .card .word p {
-        font-size: 18px;
-      }
-    
-      main .content .cards .card .image {
-        display: flex;
-        justify-content: center;
-      }
-    
-      main .content .cards .card-2 {
-        display: flex;
-        flex-direction: column;
-      }
-    
-    main footer .card .overflow {
-        width: 93%;
-      }
-    
-      main footer .card .overflow h2 {
-        font-size: 1.3rem;
-      }
-    
-      main footer .card .overflow button {
-        font-size: 1rem;
-      }
-    
-      main footer .cards-footer {
-        place-items: start;
-        grid-template-columns: auto;
-        padding-left: 2rem;
-      }
-    
-      main footer .cards-footer .item:logo-child {
-        margin-left: 2rem;
-        padding-right: 40px;
-      }
-    
-      main footer .cards-footer .item:last-child {
-        margin-top: 2rem;
-        width: 100%;
-      }
-    
-      main footer .cards-footer .item:last-child ul {
-        display: flex;
-        justify-content: center;
-      }
-    
-      main footer .copyright {
-        margin-top: 10px !important;
-      }
-    
-      main footer .copyright .words {
-        text-align: center;
-      }
+footer .card .overflow button {
+  font-size: 1rem;
+}   
+footer .cards-footer {
+  place-items: start;
+  grid-template-columns: auto;
+  padding-left: 2rem;
+}     
+footer .cards-footer .item {
+  margin-left: 2rem;
+  padding-right: 40px;
+}
+footer .cards-footer .item:logo-child {
+  margin-left: 2rem;
+  padding-right: 40px;
+}   
+footer .cards-footer .item:last-child {
+  margin-top: 2rem;
+  width: 100%;
+}  
+.cards-footer .item:last-child ul {
+  display: flex;
+  justify-content: center;
+}    
+.copyright {
+  margin-top: 10px !important;
+}   
+.copyright .words {
+ display: flex;
+ justify-content: center;
   }
-  
+}

@@ -1,0 +1,47 @@
+@media only screen and (min-width: 375px) and (max-width: 700px){
+    .hero .hero-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+    .hero-text {
+      padding-bottom: 40px;
+    }
+    .header-content .hero .hero-content img {
+      width: 100%;
+      animation: fadeup 1s 1s ease forwards;
+      opacity: 0;
+    }
+    .content {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+   .cards .card {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+    .cards .card .word {
+      width: 100%;
+    }   
+    .cards .card .image img {
+      width: 100%;
+    }  
+    .cards .card .left-img {
+      width: 100%;
+      text-align: right;
+    }
+    .cards .card .left-img img {
+      width: 100%;
+    }
+  }
+
+  .header-content .logo img {
+    width: 120px;
+    height: 20px;
+  }
